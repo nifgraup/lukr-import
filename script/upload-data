@@ -11,4 +11,4 @@ python ~/OSM/bulk_upload_06/bulk_upload_sax.py \
     -t details="http://www.openstreetmap.org/user/Ævar Arnfjörð Bjarmason/diary/11710" \
     -t permission="http://github.com/avar/lukr-osm-donation-2010-09-18/raw/master/Scan.TIF" \
     -t raw_data="http://github.com/avar/lukr-osm-donation-2010-09-18" \
-    -t conversion_script="http://github.com/nifgraup/ourfootprints-import"
+    -t conversion_script="http://github.com/nifgraup/lukr-import"
