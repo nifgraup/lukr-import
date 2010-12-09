@@ -1,37 +1,18 @@
-This repository houses scripts and documentation relating to the
-ourFootPrints.de import into OpenStreetMap.
-
-# GPX upload
-
-For uploding GPX I use
-[jgpxupload](http://svn.openstreetmap.org/applications/utils/gps-tracks/jgpxupload)
-+ a custom script:
-
-    cd ~/src/osm/applications/utils/gps-tracks/jgpxupload/src
-    javac GpxUpload.java
-    cd ~/g/ourfootprints-import
-    ofp_pass="SEEKRT" perl script/upload-gpx ~/g/ourfootprints-data
+This repository is a fork of Ævar's ourfootprint import script and modified to
+import path data from the Reykjavík GIS department:
+http://www.openstreetmap.org/user/Ævar Arnfjörð Bjarmason/diary/11710
 
 # Data conversion
 
-To convert the .mp file to .osm I'm using http://github.com/avar/ump2osm:
-
-    cd ~/g
-    git clone git@github.com:avar/ump2osm.git
-    cd ump2osm
-    git checkout ourfootprints
-
-Then:
-
-    cd ~/g/ourfootprints-import
-    python ~/g/ump2osm/txt2osm.py ~/g/ourfootprints-data/openstreetmap.mp > ourfootprint-roads.osm
+Use https://github.com/nifgraup/ogr2osm-lukr-import and follow instructions
+in translations/lukr.py.
 
 # Data upload
 
-    cd ~/src
+    cd ~/OSM
     svn co http://svn.openstreetmap.org/applications/utils/import/bulk_upload_06
 
 Upload:
 
-    time ofp_pass="SEEKRT" sh script/upload-data 
+    time lukr_pass="SEEKRT" sh script/upload-data 
 

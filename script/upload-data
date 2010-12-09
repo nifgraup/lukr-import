@@ -1,16 +1,14 @@
 #!/usr/bin/env bash
-ofp_data_rev=$(cd ~/g/ourfootprints-data ; git rev-parse HEAD | perl -pe 's/(.{10}).*/$1/')
-ofp_import_rev=$(cd ~/g/ourfootprints-import ; git rev-parse HEAD | perl -pe 's/(.{10}).*/$1/')
 
-python ~/src/bulk_upload_06/bulk_upload_sax.py \
+python ~/OSM/bulk_upload_06/bulk_upload_sax.py \
     --changeset-limit 5000 \
     --put-limit 500 \
-    -i ofp-roads.osm \
-    -u "ourFootPrints import" \
-    -p "$ofp_pass" \
-    -c "Importing ourFootPrints.de road data from ourfootprints-data $ofp_data_rev and ourfootprints-import $ofp_import_rev" \
-    -t source=ourfootprints \
-    -t website="http://www.ourfootprints.de/gps/mapsource-island_e.html" \
-    -t permission="http://lists.openstreetmap.org/pipermail/talk-is/2010-January/000363.html" \
-    -t raw_data="http://github.com/avar/ourfootprints-data" \
-    -t conversion_script="http://github.com/avar/ourfootprints-import"
+    -i ~/OSM/ogr2osm-lukr-import/gonguleidir_LUKR_170910.osm \
+    -u "nifgraup@gmail.com" \
+    -p "$lukr_pass" \
+    -c "Importing data dump of walking routes in Reykjavik donated by LUKR, the city GIS department" \
+    -t source=lukr \
+    -t details="http://www.openstreetmap.org/user/Ævar Arnfjörð Bjarmason/diary/11710" \
+    -t permission="http://github.com/avar/lukr-osm-donation-2010-09-18/raw/master/Scan.TIF" \
+    -t raw_data="http://github.com/avar/lukr-osm-donation-2010-09-18" \
+    -t conversion_script="http://github.com/nifgraup/ourfootprints-import"
