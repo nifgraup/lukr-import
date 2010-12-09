@@ -1,5 +1,5 @@
-This repository is a fork of Ævar's ourfootprint import script and modified to
-import path data from the Reykjavík GIS department:
+This repository is a fork of Ævar's ourfootprints import script and modified to
+import path data from the Reykjavík GIS department, see:
 http://www.openstreetmap.org/user/Ævar Arnfjörð Bjarmason/diary/11710
 
 # Data conversion
