@@ -8,7 +8,7 @@ python ~/OSM/bulk_upload_06/bulk_upload_sax.py \
     -p "$lukr_pass" \
     -c "Importing data dump of walking routes in Reykjavik donated by LUKR, the city GIS department" \
     -t source=lukr \
-    -t details="http://www.openstreetmap.org/user/Ã†var ArnfjÃ¶rÃ° Bjarmason/diary/11710" \
+    -t details="http://www.openstreetmap.org/user/Ævar%20Arnfjörð%20Bjarmason/diary/11710" \
     -t permission="http://github.com/avar/lukr-osm-donation-2010-09-18/raw/master/Scan.TIF" \
     -t raw_data="http://github.com/avar/lukr-osm-donation-2010-09-18" \
     -t conversion_script="http://github.com/nifgraup/lukr-import"
